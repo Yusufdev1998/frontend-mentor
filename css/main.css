@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: "Hanken Grotesk", sans-serif;
+}
+
+.card__header {
+  background: linear-gradient(180deg, #7755ff 0%, #6943ff 0.01%, #2f2ce9 100%);
+  box-shadow: 0px 30px 60px rgba(61, 108, 236, 0.15);
+  border-radius: 0px 0px 32px 32px;
+  text-align: center;
+  padding: 24px 58px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.card__header__text {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 23px;
+  text-align: center;
+  color: #cac9ff;
+}
+
+.mb-4 {
+  margin-bottom: 24px;
+  display: block;
+}
+
+.result {
+  width: 140px;
+  height: 140px;
+  background: linear-gradient(
+    180deg,
+    #4d21c9 0%,
+    rgba(37, 33, 201, 0) 100%,
+    rgba(37, 33, 201, 0) 100%
+  );
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.result h3 {
+  font-weight: 800;
+  font-size: 56px;
+  line-height: 72px;
+  color: #ffffff;
+}
+.result span {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 21px;
+  color: #cac9ff;
+  mix-blend-mode: normal;
+  opacity: 0.52;
+}
+.card__header h2 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 31px;
+  color: #ffffff;
+  margin-bottom: 8px;
+}
+
+.card__header p {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+  text-align: center;
+
+  /* Light Blue */
+
+  color: #cac9ff;
+  margin-bottom: 16px;
+}
+.card__body {
+  padding: 24px 30px;
+}
+
+.card__body__heading {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 23px;
+  color: #303b59;
+}
+
+.result__item {
+  background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.95),
+      rgba(255, 255, 255, 0.95)
+    ),
+    #ff5555;
+  border-radius: 12px;
+  display: flex;
+  padding: 17px 16px 18px 16px;
+  justify-content: space-between;
+}
+.result__item__left {
+  display: flex;
+  gap: 12px;
+  color: #ff5555;
+}
+
+.result__item__right {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 21px;
+  color: #303b59;
+}
+.result__item__right span {
+  color: #303b59;
+
+  opacity: 0.5;
+}
+
+.card__body__items {
+  gap: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.btn {
+  background: #303b59;
+  border-radius: 128px;
+  width: 100%;
+  padding: 17px 0 16px 0;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 23px;
+
+  /* White */
+
+  color: #ffffff;
+}
