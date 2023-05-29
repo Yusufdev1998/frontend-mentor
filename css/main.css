@@ -1,0 +1,266 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+    2. Remove default margin
+  */
+* {
+  margin: 0;
+}
+/*
+    3. Allow percentage-based heights in the application
+  */
+html,
+body {
+  height: 100%;
+}
+/*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+    6. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+/*
+    7. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+    8. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+:root {
+  --bg: #c5e4e7;
+  --primary-color: #26c2ae;
+  --secondary-color: #00474b;
+  --gray-text-color: #5e7a7d;
+}
+
+body {
+  font-family: "Space Mono", monospace;
+  background-color: var(--bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 87px;
+}
+.card {
+  background: #ffffff;
+  padding: 45px 48px;
+  max-width: 920px;
+  gap: 48px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  box-shadow: 0px 32px 43px rgba(79, 166, 175, 0.200735);
+  border-radius: 25px;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.label {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height */
+
+  color: var(--gray-text-color);
+}
+
+.input {
+  text-align: right;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+  color: var(--secondary-color);
+  background-color: #f3f9fa;
+  border: none;
+  border-radius: 5px;
+  padding: 6px 17px;
+  outline-color: #26c2ae;
+  width: 100%;
+}
+.input-wrapper {
+  position: relative;
+}
+.input-wrapper::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 19px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 16px;
+  background-repeat: no-repeat;
+}
+.dollar input,
+.person input {
+  padding-left: 40px;
+}
+.dollar::before {
+  background-image: url("../images/icon-dollar.svg");
+}
+.person::before {
+  background-image: url("../images/icon-person.svg");
+}
+input[type="radio"] {
+  display: none;
+}
+
+input[type="radio"]:checked + div {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+.tips {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+.tip {
+  background: #00474b;
+  border-radius: 5px;
+  padding: 6px 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+  cursor: pointer;
+}
+
+.result {
+  background-color: var(--secondary-color);
+  border-radius: 15px;
+  padding: 40px;
+  display: grid;
+  grid-template-rows: 1fr auto;
+}
+.result-top {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.result-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.result-info h3 {
+  display: flex;
+  flex-direction: column;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height */
+
+  color: #ffffff;
+}
+.result-info h3 span {
+  font-size: 13px;
+  line-height: 19px;
+  color: #7f9d9f;
+}
+
+.price {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 71px;
+  /* identical to box height */
+
+  text-align: right;
+  letter-spacing: -1px;
+
+  color: #26c2ae;
+}
+
+.btn {
+  background: #26c2ae;
+  border-radius: 5px;
+  text-transform: uppercase;
+  border: none;
+  padding: 9px 0;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #9fe8df;
+}
+
+.btn:disabled {
+  background-color: #0d686d;
+}
+.error input {
+  /* border: 2px solid #e17052; */
+  outline-color: #e17052;
+}
+.error-text {
+  display: none;
+  position: absolute;
+  top: -25px;
+  right: 0;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height */
+  text-align: right;
+  color: #e17457;
+}
+.error .error-text {
+  display: block;
+}
