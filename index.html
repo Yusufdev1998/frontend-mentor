@@ -4,69 +4,90 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- displays site properly based on user's device -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@800;500;700&display=swap"
-      rel="stylesheet"
-    />
+
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="./assets/images/favicon-32x32.png"
+      href="./images/favicon-32x32.png"
     />
     <link rel="stylesheet" href="./css/main.css" />
-    <title>Frontend Mentor | Results summary component</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Frontend Mentor | Tip calculator app</title>
   </head>
   <body>
-    <div class="card">
-      <div class="card__header">
-        <span class="card__header__text mb-4">Your Result</span>
-        <div class="result mb-4">
-          <h3>76</h3>
-          <span>of 100</span>
-        </div>
-        <h2>Great</h2>
-        <p>
-          Your performance exceed 65% of the people conducting the test here!
-        </p>
-      </div>
+    <div class="container">
+      <img width="86" height="53" src="./images/logo.svg" alt="" />
+      <div class="card">
+        <div class="content">
+          <div class="form-group">
+            <label for="bill" class="label">Bill</label>
+            <span class="input-wrapper dollar">
+              <input id="bill" class="input" type="number" placeholder="0" />
+            </span>
+          </div>
+          <div class="form-group">
+            <label class="label">Select tip %</label>
+            <div class="tips">
+              <label for="tip5">
+                <input type="radio" id="tip5" value="5" name="tip" />
+                <div class="tip">5%</div>
+              </label>
+              <label for="tip10">
+                <input id="tip10" type="radio" value="10" name="tip" />
+                <div class="tip">10%</div>
+              </label>
+              <label for="tip15">
+                <input id="tip15" type="radio" value="15" name="tip" />
+                <div class="tip">15%</div>
+              </label>
+              <label for="tip25">
+                <input id="tip25" type="radio" value="25" name="tip" />
+                <div class="tip">25%</div>
+              </label>
+              <label for="tip50">
+                <input id="tip50" type="radio" value="50" name="tip" />
+                <div class="tip">50%</div>
+              </label>
 
-      <div class="card__body">
-        <h1 class="card__body__heading mb-4">Summary</h1>
-        <div class="card__body__items mb-4">
-          <div class="result__item">
-            <div class="result__item__left">
-              <img src="./assets/images/icon-reaction.svg" alt="" />
-              Reaction
+              <input
+                oninput="this.size = this.value.length + 1"
+                type="number"
+                class="input"
+                id="custom-tip"
+                placeholder="CUSTOM"
+              />
             </div>
-            <div class="result__item__right">80<span> / 100</span></div>
           </div>
-          <div class="result__item">
-            <div class="result__item__left">
-              <img src="./assets/images/icon-reaction.svg" alt="" />
-              Reaction
-            </div>
-            <div class="result__item__right">80<span> / 100</span></div>
-          </div>
-          <div class="result__item">
-            <div class="result__item__left">
-              <img src="./assets/images/icon-reaction.svg" alt="" />
-              Reaction
-            </div>
-            <div class="result__item__right">80<span> / 100</span></div>
-          </div>
-          <div class="result__item">
-            <div class="result__item__left">
-              <img src="./assets/images/icon-reaction.svg" alt="" />
-              Reaction
-            </div>
-            <div class="result__item__right">80<span> / 100</span></div>
+          <div class="form-group">
+            <label for="bill" class="label">Number of People</label>
+            <span class="input-wrapper person">
+              <input id="people" class="input" type="number" placeholder="0" />
+              <span class="error-text">invalid</span>
+            </span>
           </div>
         </div>
-        <button class="btn">Continue</button>
+        <div class="result">
+          <div class="result-top">
+            <div class="result-info">
+              <h3>Tip amount <span>/ person</span></h3>
+              <span class="price" id="tip-result">$0.00</span>
+            </div>
+            <div class="result-info">
+              <h3>Total <span>/ person</span></h3>
+              <span class="price" id="total-result">$0.00</span>
+            </div>
+          </div>
+          <button class="btn" disabled="true">reset</button>
+        </div>
       </div>
     </div>
+
+    <script src="./app.js"></script>
   </body>
 </html>
